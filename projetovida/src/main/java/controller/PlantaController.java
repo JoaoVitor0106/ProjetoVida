@@ -22,7 +22,7 @@ public class PlantaController {
     }
 
     public void listar() {
-        System.out.println("\n🌿 Jardim Atual 🌿");
+        System.out.println("\nJardim Atual");
         if (repositorio.listar().isEmpty()) {
             System.out.println("Nenhuma planta cadastrada!");
         } else {
@@ -37,18 +37,18 @@ public class PlantaController {
         if (p != null) {
             p.setNome(novoNome);
             p.setEspecie(novaEspecie);
-            System.out.println("🔄 Planta atualizada!");
+            System.out.println("Planta atualizada!");
         } else {
-            System.out.println("❌ Planta não encontrada!");
+            System.out.println("Planta não encontrada!");
         }
     }
 
     public void remover(int id) {
         boolean removido = repositorio.remover(id);
         if (removido) {
-            System.out.println("🪓 Planta removida com sucesso!");
+            System.out.println("Planta removida com sucesso!");
         } else {
-            System.out.println("❌ Planta não encontrada!");
+            System.out.println("Planta não encontrada!");
         }
     }
 }
