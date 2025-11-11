@@ -8,7 +8,7 @@ import model.Planta;
 /**
  * Repositório responsável pelo armazenamento das plantas.
  * 
- * Aplica GRASP: High Cohesion (cada classe faz apenas seu papel)
+ * Aplicação GRASP: High Cohesion (cada classe faz apenas seu papel)
  * e Low Coupling (controller não precisa saber como IDs são gerados).
  */
 public class PlantaRepository {
