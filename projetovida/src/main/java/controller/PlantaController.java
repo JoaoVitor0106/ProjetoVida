@@ -4,9 +4,13 @@ import model.Planta;
 import repository.PlantaRepository;
 
 /**
- * Aplica GRASP:
- * - Controller: Gerencia o fluxo do sistema (plantar, listar, remover, etc.)
- * - Creator: Delega a criação da planta ao repositório (que tem as informações necessárias)
+ * Aplica o padrão GRASP: **Controller (Controlador)**.
+ *
+ * Esta classe atua como o intermediário entre a camada de apresentação (Main)
+ * e a camada de dados (PlantaRepository). Ela é responsável por receber
+ * as solicitações da interface do usuário (vindas da Main) e coordenar as
+ * ações necessárias, delegando a lógica de negócio e persistência.
+ *
  */
 public class PlantaController {
 
@@ -17,7 +21,6 @@ public class PlantaController {
     }
 
     public void plantar(String nome, String especie) {
-        // Agora não recebemos ID — o repositório gera automaticamente
         repositorio.adicionar(nome, especie);
     }
 
